@@ -1,0 +1,165 @@
+:root{
+    --background-color1: rgb(243, 243, 243);
+    --background-color2: rgb(185, 185, 185);
+    --background-color3: rgb(157, 157, 157);
+
+    --accent-color1: rgb(40, 55, 71);
+    --accent-color1_1_1: rgb(77, 98, 134);
+    --accent-color1_1_2: rgb(60, 76, 107);
+    --accent-color1_1: rgb(25, 37, 45);
+
+    --accent-color2: rgb(222, 53, 76);
+    --accent-color2_2: rgba(222, 53, 76, 0.93);
+    --accent-color4: rgb(147, 36, 50);
+
+    --accent-color3: rgb(0, 0, 0);
+
+    --accent-color5: rgba(121, 74, 180, 0.89);
+    --accent-color5_1: rgb(121, 74, 180);
+
+    --accent-color5_1_1: rgb(94, 49, 164);
+
+    --accent-color5_1_2:rgba(60, 24, 116, 0.3);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+h1{
+    font-size: 37px;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right,var(--background-color1), var(--background-color2));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.circle{
+    position: fixed;
+    top: -50vmin;
+    left: -50vmin;
+    width: 125vmin;
+    height: 115vmin;
+    border-radius: 27% 83% 61% 29% / 45% 51% 49% 55%;
+    background: var(--accent-color5_1_2);
+    z-index: -1;
+}
+.circle::after {
+    content: "";
+    position: inherit;
+    right: -50vmin;
+    bottom: -55vmin;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: rgba(60, 24, 116, 0.3);
+}
+
+.card{
+    width: 50%;
+    margin: 0 20%;
+    display: grid;
+    text-align: center;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    padding: 0 16px;
+    background: var(--accent-color1);
+    color: var(--accent-color2);
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.button:hover{
+    color: var(--accent-color2);
+    background:var(--accent-color1_1);
+
+}
+#tableHead{
+    color: var(--accent-color4);
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 28px;
+    border: 2px solid var(--background-color1);
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 24px;
+    color: var(--accent-color3);
+}
+
+
+
+table{
+    width: 100%;
+}
+th{
+}
+
+td {
+
+    border: 1px solid black;
+    border-color: var(--background-color1);
+    border-collapse: collapse;
+}
+
+#Error{
+    color: var(--accent-color2);
+    font-weight: bold;
+}
+table{
+    border-collapse: collapse;
+}
+.tabRow{
+    background-color: var(--background-color2);
+}
+
+.tabRow:hover{
+    background-color: var(--background-color3);
+}
+
+
+.tabRowOne{
+    background-color: var(--accent-color1_1_1);
+}
+.tabRowOne:nth-child(odd){
+    background-color: var(--accent-color1_1_2);
+}
+.tabRowOne:hover {
+    background-color: var(--accent-color1);
+}
+
+.tabRowTen{
+    background-color: var(--accent-color5);
+}
+.tabRowTen:nth-child(odd){
+    background-color: var(--accent-color5_1);
+}
+.tabRowTen:hover{
+    background-color: var(--accent-color5_1_1);
+}
+
+
+.tabRowHundred{
+    background-color: var(--accent-color2);
+}
+.tabRowHundred:nth-child(odd){
+    background-color: var(--accent-color2_2);
+}
+.tabRowHundred:hover {
+    background-color: var(--accent-color4);
+}
